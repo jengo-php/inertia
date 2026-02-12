@@ -4,19 +4,20 @@
  * This file is part of Inertia.js Codeigniter 4.
  *
  * (c) 2023 Fab IT Hub <hello@fabithub.com>
+ * (c) 2026 JengoPHP <hello@jengophp.com>
  *
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
  */
 
-namespace Inertia;
+namespace Jengo\Inertia;
 
 use Closure;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\View\View;
-use Inertia\Extras\Arr;
-use Inertia\Extras\Http;
+use Jengo\Inertia\Extras\Arr;
+use Jengo\Inertia\Extras\Http;
 
 /**
  * @psalm-api
@@ -43,7 +44,8 @@ class ResponseFactory
     {
         if (is_array($key)) {
             $this->sharedProps = array_merge($this->sharedProps, $key);
-        } else {
+        }
+        else {
             Arr::set($this->sharedProps, $key, $value);
         }
     }
@@ -87,7 +89,7 @@ class ResponseFactory
      */
     public function getVersion(): string
     {
-        return (string) Arr::value($this->version);
+        return (string)Arr::value($this->version);
     }
 
     /**

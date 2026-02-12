@@ -1,6 +1,6 @@
 <?php
 
-use Inertia\Inertia;
+use Jengo\Inertia\Inertia;
 
 
 /**

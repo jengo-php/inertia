@@ -1,9 +1,8 @@
 {
-  "name": "jengo/inertia-ci4",
+  "name": "jengo/inertia",
   "description": "The Codeigniter 4 adapter for inertia.js forked from fabithub/inertia-ci4",
   "license": "MIT",
   "type": "library",
-  "version": "0.0.6",
   "authors": [
     {
       "name": "Ian Oching",
@@ -12,33 +11,41 @@
   ],
   "require": {
     "php": "^8.1",
-    "codeigniter4/framework": "^4.5.1"
+    "codeigniter4/framework": "^4.7",
+    "jengo/base": "dev-main"
   },
   "require-dev": {
     "codeigniter/coding-standard": "^1.7",
     "ergebnis/composer-normalize": "^2.41",
-    "icanhazstring/composer-unused": "^0.8.11",
-    "infection/infection": "^0.27.9",
-    "pestphp/pest": "^2.34",
-    "pestphp/pest-plugin-faker": "^2.0",
-    "pestphp/pest-plugin-type-coverage": "^2.8",
+    "icanhazstring/composer-unused": "^0.9.1",
+    "infection/infection": "^0.32.4",
+    "pestphp/pest": "^4.3",
+    "pestphp/pest-plugin-faker": "^4.0",
+    "pestphp/pest-plugin-type-coverage": "^4.0",
     "phpstan/phpstan": "^1.10",
-    "qossmic/deptrac-shim": "^1.0",
     "rector/rector": "^1.0",
-    "vimeo/psalm": "^5.18",
-    "phpunit/phpunit": "^10.5"
+    "vimeo/psalm": "^6.15",
+    "phpunit/phpunit": "^12.5",
+    "deptrac/deptrac": "^3.0"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "autoload": {
     "psr-4": {
-      "Inertia\\": "src/"
+      "Jengo\\Inertia\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
       "Tests\\": "tests/",
       "Tests\\Support\\": "tests/_support/"
+    }
+  },
+  "extra": {
+    "codeigniter4": {
+      "registrar": [
+        "Jengo\\Inertia\\Config\\Registrar"
+      ]
     }
   },
   "config": {

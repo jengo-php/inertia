@@ -4,12 +4,13 @@
  * This file is part of Inertia.js Codeigniter 4.
  *
  * (c) 2023 Fab IT Hub <hello@fabithub.com>
+ * (c) 2026 JengoPHP <hello@jengophp.com>
  *
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
  */
 
-namespace Inertia;
+namespace Jengo\Inertia;
 
 use Closure;
 use CodeIgniter\Filters\FilterInterface;
@@ -17,14 +18,14 @@ use CodeIgniter\HTTP\RedirectResponse;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Validation\ValidationInterface;
-use Inertia\Extras\Http;
+use Jengo\Inertia\Extras\Http;
 
 /**
  * @psalm-api
  */
 class Middleware implements FilterInterface
 {
-    public function withVersion(): string|false|null
+    public function withVersion(): string|null|bool
     {
         if (file_exists($manifest = './build/manifest.json')) {
             return md5_file($manifest);
@@ -83,8 +84,8 @@ class Middleware implements FilterInterface
         }
 
         if (
-            $response->getStatusCode() === $response::HTTP_FOUND
-            && (request()->is('put') || request()->is('patch') || request()->is('delete'))
+        $response->getStatusCode() === $response::HTTP_FOUND
+        && (request()->is('put') || request()->is('patch') || request()->is('delete'))
         ) {
             $response->setStatusCode($response::HTTP_SEE_OTHER);
         }
@@ -118,13 +119,13 @@ class Middleware implements FilterInterface
         $errors = session()->getFlashdata('errors') ?? $validation->getErrors();
 
         if (!$errors) {
-            return (object) [];
+            return (object)[];
         }
 
         if ($request->hasHeader('x-inertia-error-bag')) {
-            return (object) [Http::getHeaderValue('x-inertia-error-bag') => $errors];
+            return (object)[Http::getHeaderValue('x-inertia-error-bag') => $errors];
         }
 
-        return (object) $errors;
+        return (object)$errors;
     }
 }

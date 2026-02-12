@@ -4,16 +4,17 @@
  * This file is part of Inertia.js Codeigniter 4.
  *
  * (c) 2023 Fab IT Hub <hello@fabithub.com>
+ * (c) 2026 JengoPHP <hello@jengophp.com>
  *
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
  */
 
-namespace Inertia;
+namespace Jengo\Inertia;
 
 use CodeIgniter\HTTP\RedirectResponse;
 use CodeIgniter\HTTP\ResponseInterface;
-use Inertia\Config\Services;
+use Jengo\Inertia\Config\Services;
 
 /**
  * Inertia.
@@ -40,6 +41,6 @@ class Inertia
      */
     public static function __callStatic(string $method, array $arguments)
     {
-        return Services::inertia()->{$method}(...$arguments);
+        return Services::inertia()->{ $method}(...$arguments);
     }
 }

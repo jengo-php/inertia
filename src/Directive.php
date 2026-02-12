@@ -4,15 +4,16 @@
  * This file is part of Inertia.js Codeigniter 4.
  *
  * (c) 2023 Fab IT Hub <hello@fabithub.com>
+ * (c) 2026 JengoPHP <hello@jengophp.com>
  *
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
  */
 
-namespace Inertia;
+namespace Jengo\Inertia;
 
-use Inertia\Config\Services;
-use Inertia\Ssr\Response;
+use Jengo\Inertia\Config\Services;
+use Jengo\Inertia\Ssr\Response;
 
 class Directive
 {
@@ -23,7 +24,7 @@ class Directive
      */
     public static function compile(array $page, string $expression = ''): string
     {
-        $id         = trim(trim($expression), "\\'\"") ?: 'app';
+        $id = trim(trim($expression), "\\'\"") ?: 'app';
         $inertiaSsr = static::withSsr($page);
 
         $template = '<div id="' . $id . '" data-page="' . htmlentities(json_encode($page)) . '"></div>';
@@ -40,7 +41,7 @@ class Directive
      */
     public static function compileHead(array $page): string
     {
-        $template   = '';
+        $template = '';
         $inertiaSsr = static::withSsr($page);
 
         if ($inertiaSsr instanceof Response) {

@@ -9,14 +9,14 @@
  * the LICENSE file that was distributed with this source code.
  */
 
-namespace Inertia;
+namespace Jengo\Inertia;
 
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\View\View;
 use Config\View as ConfigView;
-use Inertia\Extras\Arr;
-use Inertia\Extras\Http;
+use Jengo\Inertia\Extras\Arr;
+use Jengo\Inertia\Extras\Http;
 
 class Response
 {
@@ -51,7 +51,8 @@ class Response
     {
         if (is_array($key)) {
             $this->props = array_merge($this->props, $key);
-        } else {
+        }
+        else {
             $this->props[$key] = $value;
         }
 
@@ -79,7 +80,7 @@ class Response
         $only = array_filter(explode(',', Http::getHeaderValue('X-Inertia-Partial-Data', '', $request)));
 
         $props = ($only && Http::getHeaderValue('X-Inertia-Partial-Component', '', $request) === $this->component)
-            ? Arr::only($this->props, $only)
+            ?Arr::only($this->props, $only)
             : $this->props;
 
         array_walk_recursive($props, static function (&$prop) {

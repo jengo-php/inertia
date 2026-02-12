@@ -1,52 +1,57 @@
-# Inertia CI 4 (Forked & Extended)
+# Jengo Inertia
 
-This is a **fork of [`fabithub/inertia-ci4`](https://github.com/fabithub/inertia-ci4)**—a package that bridges the power of [Inertia.js](https://inertiajs.com/) with the simplicity of **CodeIgniter 4**. This fork introduces improvements, enhancements, and possibly new features aimed at extending its capabilities and better suiting custom use cases.
+**Jengo Inertia** seamlessly integrates [Inertia.js](https://inertiajs.com/) with **CodeIgniter 4**, allowing you to build modern single-page apps using classic server-side routing and controllers.
 
-> ⚠️ If you're looking for the original package, visit: [https://github.com/fabithub/inertia-ci4](https://github.com/fabithub/inertia-ci4)
+## 🚀 Features
 
----
+-   **Automatic Setup**: Comes with a dedicated installer to set up Vue, React, or Svelte.
+-   **Vite Integration**: Powered by `jengo/base` and `@jengo/vite` for a modern build experience.
+-   **Server-Side Routing**: Use standard CI4 routing and controllers.
 
-## 🔄 What’s Different in This Fork?
+## 📦 Installation
 
-> _Describe your changes here. For example:_
+1.  **Require the packages:**
 
--   Support for Laravel Mix v6+ or Vite
--   Refactored Inertia response builder
--   Middleware changes
--   More intuitive shared data setup
--   etc.
+    ```bash
+    composer require jengo/base jengo/inertia
+    ```
 
----
+2.  **Run the Vite installer (Required first):**
 
-## 💡 Why inertia-ci4?
+    ```bash
+    php spark jengo:install vite
+    ```
 
--   **Unite Backend with Frontend:** Enjoy the best of both worlds by blending CodeIgniter 4's robustness with the interactivity of _Inertia.js_.
--   **Streamlined Development:** Forget managing two separate apps. Inertia provides a smoother SPA development flow—now within CodeIgniter.
+    This sets up the necessary `package.json` and Vite configuration foundation.
 
----
+3.  **Run the Inertia installer:**
 
-## 🚀 Getting Started
+    ```bash
+    php spark jengo:install inertia
+    ```
 
-### Installation
+    The installer will guide you through:
+    -   Selecting your framework (Vue, React, Svelte).
+    -   Installing necessary NPM dependencies.
+    -   Scaffolding your entry points and views.
 
-Install via Composer:
+## 📚 Documentation
 
-```bash
-composer require jengo/inertia-ci4
-```
-
-Configuration
-Follow the original steps, or update here if anything changed.
+For more information on the Jengo installer system and base configurations, please visit the **[jengo/base](https://github.com/jengo/base)** repository.
 
 ## 🧑‍💻 Credits
 
+This package is a fork of [`fabithub/inertia-ci4`](https://github.com/fabithub/inertia-ci4).
+
 ### Original Authors:
 
-Fab IT Hub
-Krishna Gujjjar
+-   Fab IT Hub
+-   Krishna Gujjjar
 
-Fork Maintainer:
-Ian Ochieng
+### Fork Maintainer:
+
+-   JengoPHP
+-   Ian Ochieng
 
 ## 📄 License
 

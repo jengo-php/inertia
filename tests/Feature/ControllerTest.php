@@ -13,18 +13,19 @@ declare(strict_types=1);
 
 namespace Tests\Feature;
 
-use Inertia\Controllers\TestController;
+use Jengo\Inertia\Controllers\TestController;
 use Tests\Support\FeatureControllerTestCase;
 
 uses(FeatureControllerTestCase::class);
 
 describe('Controller Tests', function () {
     it('is return ok', function () {
-        /**
-         * @var FeatureControllerTestCase $this
-         */
-        $result = $this->withUri('https://example.com')->controller(TestController::class)->execute('index');
+            /**
+     * @var FeatureControllerTestCase $this
+     */
+            $result = $this->withUri('https://example.com')->controller(TestController::class)->execute('index');
 
-        expect($result->isOK())->toBeTrue();
+            expect($result->isOK())->toBeTrue();
+        }
+        );
     });
-});

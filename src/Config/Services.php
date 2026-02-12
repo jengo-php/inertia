@@ -4,16 +4,17 @@
  * This file is part of Inertia.js Codeigniter 4.
  *
  * (c) 2023 Fab IT Hub <hello@fabithub.com>
+ * (c) 2026 JengoPHP <hello@jengophp.com>
  *
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
  */
 
-namespace Inertia\Config;
+namespace Jengo\Inertia\Config;
 
 use CodeIgniter\Config\BaseService;
-use Inertia\ResponseFactory;
-use Inertia\Ssr\HttpGateway;
+use Jengo\Inertia\ResponseFactory;
+use Jengo\Inertia\Ssr\HttpGateway;
 
 class Services extends BaseService
 {
