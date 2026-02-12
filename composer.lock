@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c4a7e16555d7b509b3c8ac7111ae35e1",
+    "content-hash": "c6e546ee95a951d058c4a86bca1f416a",
     "packages": [
         {
             "name": "codeigniter4/framework",
@@ -148,16 +148,16 @@
         },
         {
             "name": "jengo/base",
-            "version": "v1.0.2",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jengo-php/base.git",
-                "reference": "dc13cac4ae1f934bb930fc9d0ad72fa194e0e390"
+                "reference": "37e1ffcc0b92965d083d35fc6bc56a58b491d6cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jengo-php/base/zipball/dc13cac4ae1f934bb930fc9d0ad72fa194e0e390",
-                "reference": "dc13cac4ae1f934bb930fc9d0ad72fa194e0e390",
+                "url": "https://api.github.com/repos/jengo-php/base/zipball/37e1ffcc0b92965d083d35fc6bc56a58b491d6cf",
+                "reference": "37e1ffcc0b92965d083d35fc6bc56a58b491d6cf",
                 "shasum": ""
             },
             "require": {
@@ -191,9 +191,9 @@
             "description": "New Jengo based on the current knowledge I have of ci4",
             "support": {
                 "issues": "https://github.com/jengo-php/base/issues",
-                "source": "https://github.com/jengo-php/base/tree/v1.0.2"
+                "source": "https://github.com/jengo-php/base/tree/v1.0.3"
             },
-            "time": "2026-02-11T16:33:13+00:00"
+            "time": "2026-02-12T11:07:21+00:00"
         },
         {
             "name": "laminas/laminas-escaper",
@@ -3225,7 +3225,7 @@
         },
         {
             "name": "infection/infection",
-            "version": "0.32.x-dev",
+            "version": "0.32.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/infection/infection.git",
@@ -3345,7 +3345,7 @@
             ],
             "support": {
                 "issues": "https://github.com/infection/infection/issues",
-                "source": "https://github.com/infection/infection/tree/0.32"
+                "source": "https://github.com/infection/infection/tree/0.32.4"
             },
             "funding": [
                 {
